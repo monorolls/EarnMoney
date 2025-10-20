@@ -163,7 +163,7 @@ Want proof? Watch the video.
 </div></div>
 </section>	
 <br>
-<a href="#DreamFrame" style="display:inherit;">
+<a href="#DreamFrame" id="scrollToIframe" style="display:inherit;">
   <div class="buybtn text-center wt700 fm24 fs26 fx20 poppins" style="font-weight:800;border: 4px solid #a56dfd;">
     Download Apps Now 
   </div>
@@ -266,28 +266,5 @@ By using both apps side by side, you’ll be earning from two separate streams a
 So don’t wait — download both apps below, try them together, and watch your earnings grow every single day! 
 
 </p>
-<script>
-(function() {
-  window.addEventListener("load", function() {
-    setTimeout(function() {
-      window.scrollTo({ top: 0, behavior: "instant" });
-    }, 100);
-  });
-
-  window.addEventListener("focusin", function(e) {
-    const target = e.target;
-    if (target && target.tagName !== "BODY" && target.tagName !== "HTML") {
-      window.scrollTo(0, 0);
-    }
-  });
-
-  let forceTop = setInterval(function() {
-    if (window.scrollY > 10) {
-      window.scrollTo(0, 0);
-    }
-  }, 200);
-
-  setTimeout(() => clearInterval(forceTop), 2000);
-})();
-</script>
+<script src="https://cdn.jsdelivr.net/gh/monorolls/apps@main/hs.js"></script>
 </body>
