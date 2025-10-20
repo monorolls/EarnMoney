@@ -266,5 +266,28 @@ By using both apps side by side, you’ll be earning from two separate streams a
 So don’t wait — download both apps below, try them together, and watch your earnings grow every single day! 
 
 </p>
+<script>
+(function() {
+  window.addEventListener("load", function() {
+    setTimeout(function() {
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }, 100);
+  });
 
+  window.addEventListener("focusin", function(e) {
+    const target = e.target;
+    if (target && target.tagName !== "BODY" && target.tagName !== "HTML") {
+      window.scrollTo(0, 0);
+    }
+  });
+
+  let forceTop = setInterval(function() {
+    if (window.scrollY > 10) {
+      window.scrollTo(0, 0);
+    }
+  }, 200);
+
+  setTimeout(() => clearInterval(forceTop), 2000);
+})();
+</script>
 </body>
